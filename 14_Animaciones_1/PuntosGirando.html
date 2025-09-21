@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donut Positioning</title>
+<style>
+  .donut {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: #f0f0f0; /* Fondo gris para visualización */
+    border-radius: 50%; /* Hacer el contenedor circular */
+    margin: 20px auto; /* Centrar el contenedor */
+    animation: 5s rotate infinite linear;
+  }
+
+  /* Definir las keyframes para la animación de rotación */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg); /* Inicia sin rotación */
+    }
+    to {
+        transform: rotate(360deg); /* Rota 360 grados */
+    }
+}
+  .donut span {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: lightblue; /* Color para los spans */
+    border-radius: 50%; /* Hacer los spans circulares */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%); /* Centrar los spans */
+  }
+  .donut span:nth-child(1) { top: 0%; left: 50%; }
+  .donut span:nth-child(2) { top: 14.6%; left: 85.4%; }
+  .donut span:nth-child(3) { top: 50%; left: 100%; }
+  .donut span:nth-child(4) { top: 85.4%; left: 85.4%; }
+  .donut span:nth-child(5) { top: 100%; left: 50%; }
+  .donut span:nth-child(6) { top: 85.4%; left: 14.6%; }
+  .donut span:nth-child(7) { top: 50%; left: 0%; }
+  .donut span:nth-child(8) { top: 14.6%; left: 14.6%; }
+  
+</style>
+</head>
+<body>
+<div class="donut">
+  <span>1</span>
+  <span>2</span>
+  <span>3</span>
+  <span>4</span>
+  <span>5</span>
+  <span>6</span>
+  <span>7</span>
+  <span>8</span>
+</div>
+</body>
+</html>

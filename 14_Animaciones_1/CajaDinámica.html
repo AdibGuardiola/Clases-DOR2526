@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Caja por el borde (CSS)</title>
+  <style>
+    :root {
+      --size: 60px;     /* tamaño de la caja */
+      --dur: 8s;        /* duración de una vuelta completa */
+    }
+
+    /* Caja azul en la esquina superior-izquierda */
+    .caja {
+      position: fixed;          /* fija respecto a la ventana */
+      top: 0; left: 0;
+      width: var(--size);
+      height: var(--size);
+      background: #1062ff;
+      border-radius: 8px;
+      animation: borde var(--dur) linear infinite;
+    }
+
+    /* Recorre las 4 esquinas de la ventana */
+    @keyframes borde {
+      0%   { transform: translate(0, 0); }
+      25%  { transform: translate(calc(100vw - var(--size)), 0); }
+      50%  { transform: translate(calc(100vw - var(--size)), calc(100vh - var(--size))); }
+      75%  { transform: translate(0, calc(100vh - var(--size))); }
+      100% { transform: translate(0, 0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="caja"></div>
+</body>
+</html>

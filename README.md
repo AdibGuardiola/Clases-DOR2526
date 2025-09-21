@@ -1,2 +1,2 @@
-# Clases DOR2526
-Clases DOR2526
+# Clases2526DOR
+Clases DOR 2526
