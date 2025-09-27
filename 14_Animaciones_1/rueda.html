@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rueda girando</title>
+  <style>
+    @keyframes girar {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .rueda {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      background: red;
+      border-radius: 50%;
+      animation: girar 1s infinite linear;
+    }
+
+    /* Aguja para ver el giro */
+    .rueda::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 8px;              /* cerca del borde superior */
+      width: 8px;             /* Grosor */
+      height: 40px;            /* Altura */
+      background: white;
+      border-radius: 2px;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="rueda"></div>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo ::after</title>
+  <style>
+    @keyframes girar {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+
+    .caja {
+      position: relative;       /* Necesario para que ::after se posicione dentro */
+      width: 150px;
+      height: 150px;
+      background: lightblue;
+      margin: 50px auto;
+      
+    }
+
+    .caja::after {
+      content: "";              /* Obligatorio, aunque sea vacío */
+      position: absolute;       /* Se posiciona respecto a .caja */
+      width: 90px;
+      height: 8px;
+      border-radius: 0px;
+      background: red;
+      top: 50px;                /* A 10px desde arriba */
+      left: 50px;              /* A 10px desde la derecha */
+      transform-origin: left center;
+      animation: girar 1s infinite linear;
+    }
+  </style>
+</head>
+<body>
+  <div class="caja"></div>
+</body>
+</html> -->

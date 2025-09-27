@@ -1,0 +1,147 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplos Position: Relative, Absolute y Sticky</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    h2 {
+      margin: 20px 0 10px 0;
+      font-size: 22px;
+    }
+
+    /* --- Caja Relative --- */
+    .contenedor-relative {
+      background: lightgray;
+      width: 300px;
+      height: 200px;
+      margin: 20px;
+      position: relative;
+    }
+
+    .caja-relative {
+      position: relative;
+      top: 40px;
+      left: 100px;
+      width: 100px;
+      height: 100px;
+      background: lightgreen;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* --- Caja Absolute --- */
+    .contenedor-absolute {
+      background: lightgray;
+      width: 300px;
+      height: 200px;
+      margin: 20px;
+      position: relative; /* Para que absolute tome como referencia este contenedor */
+    }
+
+    .caja-absolute {
+      position: absolute;
+      top: 100px;
+      left: 30px;
+      width: 100px;
+      height: 100px;
+      background: coral;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* --- Caja Sticky --- */
+    .caja-sticky {
+      position: sticky;
+      top: 0;
+      background: dodgerblue;
+      color: white;
+      padding: 20px;
+      font-size: 18px;
+    }
+
+    .contenido {
+      height: 1500px;
+      background: linear-gradient(white, lightpink);
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Relative</h2>
+  <div class="contenedor-relative">
+    <div class="caja-relative">Caja Relative</div>
+  </div>
+
+  <h2>Absolute</h2>
+  <div class="contenedor-absolute">
+    <div class="caja-absolute">Caja Absolute</div>
+  </div>
+
+  <h2>Sticky</h2>
+  <div class="caja-sticky">Soy Sticky - me quedo arriba al hacer scroll</div>
+  <div class="contenido">
+    Desplázate hacia abajo para ver cómo la caja azul se queda fija en la parte superior.
+  </div>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo Relative vs Absolute</title>
+  <style>
+    .caja {
+      width: 100px;
+      height: 100px;
+      margin: 5px;
+      display: inline-block;
+      background: lightgray;
+    }
+
+    .relative {
+      position: relative;
+      top: 20px;   /* desplaza hacia abajo */
+      left: 20px;  /* desplaza hacia la derecha */
+      background: lightgreen;
+    }
+
+    .absolute {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: coral;
+    }
+
+    /* Contenedor para que la caja absolute se posicione dentro */
+    .contenedor {
+      position: relative;   /* 👈 clave para que absolute use este marco */
+      width: 400px;
+      height: 200px;
+      background: lightblue;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Relative</h2>
+  <div class="caja"></div>
+  <div class="caja relative">Relative</div>
+  <div class="caja"></div>
+
+  <h2>Absolute</h2>
+  <div class="contenedor">
+    <div class="caja absolute">Absolute</div>
+  </div>
+
+</body>
+</html>
